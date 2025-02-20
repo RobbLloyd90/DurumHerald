@@ -4,7 +4,7 @@ const Articles = ({ data }) => {
   return (
     <>
       <section>
-        <div className="landing-page-container">
+        <div className="background-container">
           <ArticleList articles={data} />
         </div>
       </section>

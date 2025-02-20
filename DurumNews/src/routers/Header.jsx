@@ -6,16 +6,19 @@ const Header = () => {
   return (
     <header className="header">
       <div className="to-homepage-icon-container">
-        <div className=".to-homepage-button">
-          <Link to="/">
-            <img
-              className="to-homepage-icon"
-              src={homePageIcon}
-              alt="Durum Herald logo of a brown blade of durum wheat grass"
-            />
-          </Link>
+        <div className="to-homepage-button">
+          <nav>
+            <Link to="/" className="homepage-link">
+              <img
+                className="to-homepage-icon"
+                src={homePageIcon}
+                alt="Durum Herald logo of a brown blade of durum wheat grass"
+              />
+
+              <div className="site-name-text">Durum Herald</div>
+            </Link>
+          </nav>
         </div>
-        <p className="site-name-text">Durum Herald</p>
       </div>
       <div className="dropdown-bar">
         <div className="dropdown">

@@ -121,20 +121,38 @@ a:hover {
   position: flex;
 }
 
-.landing-page-container {
-  background-color: #fde3c4;
+.background-container {
+  background-color: #f5efe7;
 }
 
+.article-container {
+  padding: 1em;
+}
+
+.article-body-card {
+  background-color: orange;
+  border-radius: 4em;
+  height: auto;
+  margin: 0.4em;
+}
 .article-card {
+  border: #668f80;
   justify-items: center;
   margin: -5em;
   padding: 0.1em;
 }
+.article-img {
+  border-radius: 4em;
+  text-align: center;
+  width: 22em;
+}
+.article-body-card {
+  text-align: left;
+}
 
 .article-card-img {
   border-radius: 4em;
-  opacity: 60%;
-  background-color: #535bf2;
+  opacity: 55%;
   text-align: center;
   height: 17rem;
 }
@@ -152,18 +170,24 @@ a:hover {
 }
 
 .to-homepage-icon-container {
-  justify-content: center;
+  height: 7em;
+}
+.homepage-link {
   display: flex;
-  position: absolute;
-  margin: 0.2em;
-  padding: 0.4em;
+  align-items: center;
+  text-decoration: none;
+  padding: 2em;
+}
+
+.comment-card {
+  background-color: orange;
+  border-radius: 3.8em;
+  margin: 1.6em;
+  height: auto;
 }
 
 .to-homepage-button {
-  padding: 10rem;
-  height: 4em;
-  background-color: pink;
-  margin: 4em;
+  transform: translateY(-11%);
 }
 .to-homepage-icon {
   height: 4em;
@@ -180,7 +204,7 @@ a:hover {
   font-size: 1.5em;
 }
 h1 {
-  color: #ddd;
+  color: #000000;
   font-size: 3.2em;
   line-height: 1.1;
 }
