@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const ArticleList = ({ articles }) => {
-  return (
-    <div className="rows">
-      {articles.map((article, index) => (
+  const listOfArticles = articles.map((article, index) => (
+    <ul key={index}>
+      <Link to={`/article/${article.article_id}`}>
         <div className="article-card">
           <img
             key={index}
@@ -13,9 +15,10 @@ const ArticleList = ({ articles }) => {
             <div className="container-text">{article.title}</div>
           </div>
         </div>
-      ))}
-    </div>
-  );
+      </Link>
+    </ul>
+  ));
+  return <div className="rows">{listOfArticles}</div>;
 };
 
 export default ArticleList;
