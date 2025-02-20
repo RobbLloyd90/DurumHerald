@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useFetchData from "../customHooks/useFetchData";
 import CommentsList from "../props/CommentsList";
 import SingleArticle from "../props/SingleArticle";
+import React from "react";
 
 const Article = () => {
   const { id } = useParams();
@@ -19,6 +20,7 @@ const Article = () => {
   } = useFetchData(
     "https://durum-herald.onrender.com/api/articles/" + id + "/comments"
   );
+
   return (
     <section>
       <div className="background-container">

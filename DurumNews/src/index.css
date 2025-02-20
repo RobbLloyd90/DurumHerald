@@ -37,18 +37,15 @@ a:hover {
 .header {
   background-color: #668f80;
   display: flex;
-  height: 11em;
-  z-index: 2;
+  height: 7.2em;
 }
 .header-inner {
   padding: 0;
 }
 .dropbnt {
-  background-color: 3498DB;
-  color: white;
-  padding: 16px;
+  background-color: white;
+  padding: 1.6em;
   border: none;
-  cursor: pointer;
 }
 .dropbtn:hover .dropbtn:focus {
   background-color: #2980b9;
@@ -60,7 +57,34 @@ a:hover {
   inset: 0;
   height: 3em;
   padding: 0.5em;
+}
+.sortby-bar {
+  background-color: none;
+  justify-items: right;
   z-index: 1;
+  position: relative;
+  padding: 0.5em;
+}
+
+.sortby-btn {
+  background-color: none;
+  padding: 1.6em;
+  border: none;
+  z-index: 1;
+}
+
+.sortby-dropdown {
+  border: #c7c7c7;
+  border-radius: 4em;
+  box-sizing: border-box;
+  justify-content: center;
+  max-width: 10em;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition-duration: 0.65s;
+  transition-property: height, max-width;
+  transition-timing-function: cubic-bezier(0.19, 1, 22, 1);
 }
 
 .dropdown {
@@ -87,11 +111,9 @@ a:hover {
 
 .dropdown-content {
   display: flex;
-  position: absolute;
   background-color: #f1f1f1;
   min-width: 0.2em;
   box-shadow: 0px 8px 16px 0px rbg(0, 0, 0, 0.2);
-  z-index: 1;
 }
 
 .dropdown-content a:hover {
@@ -114,7 +136,6 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  z-index: 1;
 }
 .rows {
   justify-items: center;
@@ -138,7 +159,6 @@ a:hover {
 .article-card {
   border: #668f80;
   justify-items: center;
-  margin: -5em;
   padding: 0.1em;
 }
 .article-img {
@@ -159,6 +179,7 @@ a:hover {
 .container-text {
   text-align: center;
 }
+
 .article-title-card {
   background-color: white;
   box-sizing: border-box;
@@ -217,8 +238,9 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
-  cursor: pointer;
   transition: border-color 0.25s;
+  pointer-events: auto;
+  z-index: 2;
 }
 button:hover {
   border-color: #646cff;

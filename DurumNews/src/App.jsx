@@ -14,19 +14,19 @@ function App() {
     error,
     isPending,
   } = useFetchData("https://durum-herald.onrender.com/api/articles");
+
   return (
     <>
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
-      <body>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home data={articles} />} />
-          <Route path="/articles" element={<Articles data={articles} />} />
-          <Route path="/article/:id" element={<Article />} />
-        </Routes>
-        <Footer />
-      </body>
+
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home data={articles} />} />
+        <Route path="/articles" element={<Articles data={articles} />} />
+        <Route path="/article/:id" element={<Article />} />
+      </Routes>
+      <Footer />
     </>
   );
 }

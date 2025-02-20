@@ -1,4 +1,10 @@
 const SingleArticle = ({ article }) => {
+  let voteCount = 0;
+
+  const handleVote = () => {
+    console.log("Clicked");
+    voteCount++;
+  };
   return (
     <div className="article-container">
       <h3>Topic: {article.topic}</h3>
@@ -15,6 +21,8 @@ const SingleArticle = ({ article }) => {
           <h3>Votes {article.votes}</h3>
 
           <h4>{article.created_at}</h4>
+
+          <button onClick={handleVote}>Increase votes {voteCount}</button>
         </article>
       </div>
     </div>
