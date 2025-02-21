@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import homePageIcon from "../assets/DurumNew-logo.png";
-import newPostIcon from "../assets/plus-square-svgrepo-com.svg";
 
 const Header = () => {
   return (
@@ -24,17 +23,6 @@ const Header = () => {
           <button className="dropbtn">
             <Link to="/Articles">All Articles</Link>
           </button>
-        </div>
-      </div>
-      <div className="site-header_bar-right">
-        <div className="small-button">
-          <Link to="/article-post">
-            <img
-              className="small-icon"
-              src={newPostIcon}
-              alt="Make a new post button"
-            ></img>
-          </Link>
         </div>
       </div>
     </header>
