@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ArticleList from "../props/ArticleList";
+import ArticleList from "./ArticleList";
 import { useEffect, useState } from "react";
 
 const Articles = ({ data }) => {
@@ -49,23 +49,12 @@ const Articles = ({ data }) => {
   return (
     <>
       <section className="background-container">
-        <div>
-          <div>
-            <h3>Sort-by</h3>
-            <button type="button" onClick={handleSortAsc}>
-              A-z
-            </button>
-            <button type="button" onClick={handleSortDesc}>
-              Z-a
-            </button>
-            <button type="button" onClick={handleMostRecent}>
-              Most Recent
-            </button>
-            <button type="button" onClick={handleMostPopular}>
-              Most Popular
-            </button>
-          </div>
-        </div>
+        <h3>Sort-by</h3>
+        <button onClick={handleSortAsc}>A-z</button>
+        <button onClick={handleSortDesc}>Z-a</button>
+        <button onClick={handleMostRecent}>Most Recent</button>
+        <button onClick={handleMostPopular}>Most Popular</button>
+
         <ArticleList articles={sortedData} />
       </section>
     </>

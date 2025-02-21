@@ -1,11 +1,11 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "../src/index.css";
-import Home from "./routers/Home";
-import Header from "./routers/Header";
-import Articles from "./routers/Articles";
-import Article from "./routers/Article";
-import Footer from "./routers/Footer";
+import Home from "./components/Home";
+import Header from "./components/Header";
+import Articles from "./components/Articles";
+import Article from "./components/Article";
+import Footer from "./components/Footer";
 import useFetchData from "./customHooks/useFetchData";
 
 function App() {

@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import useFetchData from "../customHooks/useFetchData";
-import CommentsList from "../props/CommentsList";
-import SingleArticle from "../props/SingleArticle";
+import CommentsList from "./CommentsList";
+import SingleArticle from "./SingleArticle";
 import React from "react";
-
+import PostArticle from "./PostArticle";
 const Article = () => {
   const { id } = useParams();
 
@@ -27,6 +27,7 @@ const Article = () => {
         {articleIsPending && <div>Loading...</div>}
         {articleError && <div>{articleError}</div>}
         <SingleArticle article={article} />
+        <PostArticle />
         <CommentsList comments={comments} />
       </div>
     </section>
